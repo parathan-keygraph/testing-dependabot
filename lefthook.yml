@@ -1,0 +1,17 @@
+pre-commit:
+  parallel: true
+  commands:
+    betterleaks:
+      run: betterleaks git --pre-commit --redact --staged --verbose
+
+pre-push:
+  parallel: true
+  commands:
+    audit-npm:
+      run: npm audit --audit-level high
+    # OR for pnpm:
+    # audit-pnpm:
+    #   run: pnpm audit --audit-level high
+    # OR for uv:
+    # audit-uv:
+    #   run: uv audit
