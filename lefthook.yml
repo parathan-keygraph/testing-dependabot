@@ -9,9 +9,7 @@ pre-push:
   commands:
     audit-npm:
       run: npm audit --audit-level high
-    # OR for pnpm:
-    # audit-pnpm:
-    #   run: pnpm audit --audit-level high
-    # OR for uv:
-    # audit-uv:
-    #   run: uv audit
+    audit-pnpm:
+      run: pnpm audit --audit-level high
+    audit-uv:
+      run: uv audit
